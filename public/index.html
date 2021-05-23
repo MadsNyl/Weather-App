@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="w-full h-screen box-border font-serif bg-white text-gray-800">
+
+    <div class="w-full h-screen relative">
+            <div class="flex w-full items-center h-10">
+                <h1 class="ml-10 text-2xl md:text-4xl tracking-wide font-light">Weather API</h1>
+            </div>
+            <div class="flex justify-center pt-10">
+                <div class="w-full text-center space-y-6">
+                    <input class="w-1/2 p-3 rounded-md shadow-md placeholder-gray-800 placeholder-opacity-70 focus:outline-none focus:shadow-lg transition duration-300 ease-in-out" id="searchInput" type="text" placeholder="Enter a location...">
+                    <h1 class="text-2xl uppercase tracking-wide font-bold" id="location"></h1>
+                </div>
+            </div>
+            <div class="flex justify-center h-36">
+                <div>
+                    <img id="weatherIcon" src="" alt="">
+                </div>
+            </div>
+            <div>
+                    <div class="flex w-full justify-center">
+                        <div class="block w-1/2 p-4 rounded-md shadow-md bg-gradient-to-r from-yellow-500 to-yellow-300">
+                            <div class="flex space-x-6 justify-center">
+                                <ul class=" tracking-wider text-md">
+                                    <li>Sunrise:</li>
+                                    <li>Sunset:</li>
+                                </ul>
+                                <ul>
+                                    <li id="sunrise">---</li>
+                                    <li id="sunset">---</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center space-x-4 md:space-x-20 pt-10">
+                        <div class="bg-gradient-to-b from-blue-900 to-gray-900 rounded-md shadow-md text-gray-200 p-4 md:w-72">
+                            <h1 class="text-xl pb-2" >Temperature</h1>
+                            <div class="flex space-x-6 md:space-x-10">
+                                <ul>
+                                    <li>Temperature:</li>
+                                    <li>Feels like:</li>
+                                    <li>Min. temperature:</li>
+                                    <li>Max. temperature</li>
+                                </ul>
+                                <ul>
+                                    <li id="temperature">---</li>
+                                    <li id="feelsLike">---</li>
+                                    <li id="minTemp">---</li>
+                                    <li id="maxTemp">---</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-b from-blue-900 to-gray-900 rounded-md shadow-md text-gray-200 p-4 md:w-72">
+                            <h1 class="text-xl pb-2">Weather</h1>
+                            <div class="flex space-x-6 md:space-x-10">
+                                <ul>
+                                    <li>Wind degree:</li>
+                                    <li>Wind speed:</li>
+                                    <li>Weather Status:</li>
+                                    <li>Humidity:</li>
+                                </ul>
+                                <ul>
+                                    <li id="windDeg">---</li>
+                                    <li id="windSpeed">---</li>
+                                    <li id="weatherStatus">---</li>
+                                    <li id="humidity">---</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="absolute bottom-2 right-2">
+                <div class="flex justify-center space-x-4 opacity-50">
+                    <p >Created by Mads Nylund</p>
+                    <a href="https://openweathermap.org/">API supported by OpenWeatherMap</a>
+                </div>
+            </div>
+    </div>
+
+    
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuYbMIJNta56_ZRskX8XhP0GSQEVJ9QFc&libraries=places&callback=initMap">
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
